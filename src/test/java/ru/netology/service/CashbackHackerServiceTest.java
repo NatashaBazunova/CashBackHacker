@@ -1,8 +1,8 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackerServiceTest {
 
@@ -12,7 +12,7 @@ public class CashbackHackerServiceTest {
         int amount = 900;
         int expected = 100;
         int actual = service.remain(900);
-        assertEquals(100, 100);
+        assertEquals(expected, actual);
     }
     @Test
     public void shouldShowRemainFrom500() {
@@ -20,7 +20,7 @@ public class CashbackHackerServiceTest {
         int amount = 500;
         int expected = 500;
         int actual = service.remain(500);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class CashbackHackerServiceTest {
         int amount = 100;
         int expected = 900;
         int actual = service.remain(100);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class CashbackHackerServiceTest {
         int amount = 1100;
         int expected = 900;
         int actual = service.remain(1100);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @Test
     public void shouldShowRemainFrom1000() {
@@ -46,7 +46,7 @@ public class CashbackHackerServiceTest {
         int amount = 1000;
         int expected = 0;
         int actual = service.remain(1000);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -55,7 +55,7 @@ public class CashbackHackerServiceTest {
         int amount = 999;
         int expected = 1;
         int actual = service.remain(999);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @Test
     public void shouldShowRemainFrom3999() {
@@ -63,7 +63,7 @@ public class CashbackHackerServiceTest {
         int amount = 3999;
         int expected = 1;
         int actual = service.remain(3999);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @Test
     public void shouldShowRemainFrom1() {
@@ -71,7 +71,7 @@ public class CashbackHackerServiceTest {
         int amount = 1;
         int expected = 999;
         int actual = service.remain(1);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @Test
     public void shouldShowRemainFrom0() {
@@ -79,7 +79,7 @@ public class CashbackHackerServiceTest {
         int amount = 0;
         int expected = 1000;
         int actual = service.remain(0);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
 }
